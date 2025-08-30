@@ -92,6 +92,9 @@ class LinkedExInjector {
     linkedExContainer.className = 'linkedex-container';
     linkedExContainer.innerHTML = `
       <div class="linkedex-buttons">
+        <span class="linkedex-brand" title="LinkedEx - Content Intelligence">
+          <span style="color: #0077b5; font-weight: 700; font-size: 11px; opacity: 0.7;">ex</span>
+        </span>
         <button class="linkedex-mode-toggle" title="Toggle between Signal and Craft mode">
           ${this.captureMode === 'signal' ? '💭 Signals' : '🎨 Craft'}
         </button>

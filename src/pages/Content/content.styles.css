@@ -1,36 +1,51 @@
 /* LinkedEx Content Styles */
 
-/* Container for LinkedEx buttons below posts */
+/* Container for LinkedEx buttons integrated in posts */
 .linkedex-container {
-  padding: 12px 16px;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-  background: linear-gradient(to right, #f8fafd, #ffffff);
+  padding: 8px 16px 12px;
+  margin: 0 -16px;
+  background: rgba(248, 250, 253, 0.5);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  position: relative;
 }
 
 .linkedex-buttons {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* LinkedEx brand indicator */
+.linkedex-brand {
+  padding: 2px 6px;
+  background: rgba(0, 119, 181, 0.08);
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 4px;
 }
 
 /* Mode toggle button */
 .linkedex-mode-toggle {
-  padding: 6px 12px;
-  border: 1px solid #0077b5;
-  border-radius: 16px;
-  background: white;
+  padding: 4px 10px;
+  border: 1px solid rgba(0, 119, 181, 0.3);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.9);
   color: #0077b5;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
+  backdrop-filter: blur(4px);
 }
 
 .linkedex-mode-toggle:hover {
   background: #0077b5;
   color: white;
+  border-color: #0077b5;
   transform: translateY(-1px);
-  box-shadow: 0 2px 4px rgba(0, 119, 181, 0.2);
+  box-shadow: 0 2px 6px rgba(0, 119, 181, 0.25);
 }
 
 /* Reaction buttons container */
@@ -42,36 +57,49 @@
 
 /* Individual reaction buttons */
 .linkedex-reaction-btn {
-  padding: 6px 10px;
-  border: 1px solid #e0e0e0;
-  border-radius: 20px;
-  background: white;
-  font-size: 16px;
+  padding: 4px 8px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  font-size: 14px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
   position: relative;
+  opacity: 0.85;
 }
 
 .linkedex-reaction-btn:hover {
-  transform: scale(1.1);
-  border-color: #0077b5;
-  box-shadow: 0 2px 8px rgba(0, 119, 181, 0.15);
+  transform: scale(1.05) translateY(-2px);
+  border-color: rgba(0, 119, 181, 0.4);
+  box-shadow: 0 3px 10px rgba(0, 119, 181, 0.2);
+  opacity: 1;
+  background: white;
 }
 
 .linkedex-reaction-btn:active {
-  transform: scale(0.95);
+  transform: scale(0.98);
 }
 
 /* Signal mode specific styles */
 .linkedex-reactions.signal .linkedex-reaction-btn {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border: none;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.linkedex-reactions.signal .linkedex-reaction-btn:hover {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+  border-color: rgba(102, 126, 234, 0.4);
 }
 
 /* Craft mode specific styles */
 .linkedex-reactions.craft .linkedex-reaction-btn {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  border: none;
+  background: linear-gradient(135deg, rgba(240, 147, 251, 0.1) 0%, rgba(245, 87, 108, 0.1) 100%);
+  border: 1px solid rgba(240, 147, 251, 0.2);
+}
+
+.linkedex-reactions.craft .linkedex-reaction-btn:hover {
+  background: linear-gradient(135deg, rgba(240, 147, 251, 0.2) 0%, rgba(245, 87, 108, 0.2) 100%);
+  border-color: rgba(240, 147, 251, 0.4);
 }
 
 /* Modal overlay */
